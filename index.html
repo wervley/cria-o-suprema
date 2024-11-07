@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa para Janaína</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vinda, Janaína!</h1>
+    </header>
+    <section id="mensagem-secreta">
+        <button onclick="mostrarMensagem()">Clique aqui para uma surpresa!</button>
+        <p id="mensagem" style="display: none;">Você é a pessoa mais especial do mundo para mim. Te amo!</p>
+    </section>
+    <section id="emoticon-chuva" style="display: none;">
+        <div class="emoticon" id="emoticon"></div>
+        <div id="frase-surpresa" style="display: none; text-align: center; margin-top: 20px; font-size: 1.5em; color: #ff69b4;">
+            Espero que goste, amor...
+        </div>
+        <div id="mensagem-final" style="display: none;">
+            <p id="mensagem-texto"></p>
+            <button onclick="recomeçar()">Recomeçar</button>
+        </div>
+    </section>
+    <section id="quiz" style="display: none;">
+        <h2>Quiz: Quanto você sabe sobre nossos momentos?</h2>
+        <div id="perguntas-quiz">
+            <!-- Pergunta 1 -->
+            <div class="pergunta" id="pergunta1">
+                <p>Onde foi nosso primeiro encontro?</p>
+                <button onclick="responderQuiz(1, 'certa')">A) Shopping Grande Circular</button>
+                <button onclick="responderQuiz(1, 'errada')">B) Teatro Amazonas</button>
+                <button onclick="responderQuiz(1, 'errada')">C) Parque Jefferson Péres</button>
+            </div>
+
+            <!-- Pergunta 2 -->
+            <div class="pergunta" id="pergunta2" style="display: none;">
+                <p>Qual foi o primeiro filme que assistimos juntos?</p>
+                <button onclick="responderQuiz(2, 'errada')">A) Coraline</button>
+                <button onclick="responderQuiz(2, 'errada')">B) Harry Potter e a Pedra Filosofal</button>
+                <button onclick="responderQuiz(2, 'certa')">C) Sim Senhor (Jim Carrey)</button>
+            </div>
+
+            <!-- Pergunta 3 -->
+            <div class="pergunta" id="pergunta3" style="display: none;">
+                <p>Qual é a série que assistimos juntos atualmente?</p>
+                <button onclick="responderQuiz(3, 'errada')">A) Dexter</button>
+                <button onclick="responderQuiz(3, 'certa')">B) Smallville</button>
+                <button onclick="responderQuiz(3, 'errada')">C) Stranger Things</button>
+            </div>
+
+            <!-- Pergunta 4 -->
+            <div class="pergunta" id="pergunta4" style="display: none;">
+                <p>Qual música nós gostamos de ouvir juntos?</p>
+                <button onclick="responderQuiz(4, 'errada')">A) Nem um dia - Djavan</button>
+                <button onclick="responderQuiz(4, 'certa')">B) Dia Branco - Geraldo Azevedo</button>
+                <button onclick="responderQuiz(4, 'errada')">C) Yoko - Terno Rei</button>
+            </div>
+
+            <!-- Pergunta 5 -->
+            <div class="pergunta" id="pergunta5" style="display: none;">
+                <p>Qual é uma das alergias que influenciou algumas de nossas experiências?</p>
+                <button onclick="responderQuiz(5, 'certa')">A) Alergia a látex</button>
+                <button onclick="responderQuiz(5, 'errada')">B) Alergia a amendoim</button>
+                <button onclick="responderQuiz(5, 'errada')">C) Alergia a poeira</button>
+            </div>
+
+            <!-- Pergunta 6 -->
+            <div class="pergunta" id="pergunta6" style="display: none;">
+                <p>Vamos continuar conhecendo um ao outro?</p>
+                <button onclick="responderQuiz(6, 'certa')">A) sim</button>
+                <button onclick="responderQuiz(6, 'errada')">B) a letra A</button>
+                <button onclick="responderQuiz(6, 'errada')">C) não</button>
+            </div>
+        </div>
+        <p id="resultado-quiz"></p>
+    </section>
+    <section id="fotos">
+        <h2>Nossos Momentos</h2>
+        <div class="galeria-fotos">
+            <a href="https://drive.google.com/uc?id=1VfMuUM-kpfJ8rEHms5NZb98hr2-Jnp-m" target="_blank">
+                <img src="https://drive.google.com/uc?id=1VfMuUM-kpfJ8rEHms5NZb98hr2-Jnp-m" alt="Momento especial 1">
+            </a>
+            <a href="https://drive.google.com/uc?id=1ehhioXpmN_cWc6fge-lc7nZKqfV4Vy7X" target="_blank">
+                <img src="https://drive.google.com/uc?id=1ehhioXpmN_cWc6fge-lc7nZKqfV4Vy7X" alt="Momento especial 2">
+            </a>
+            <a href="https://drive.google.com/uc?id=1GiilE2GWH4FkEWYciineqCvyaTymUgkh" target="_blank">
+                <img src="https://drive.google.com/uc?id=1GiilE2GWH4FkEWYciineqCvyaTymUgkh" alt="Momento especial 3">
+            </a>
+            <a href="https://drive.google.com/uc?id=1OzFTf3C_-2n7nLy7f8I0sCD3y3Q_mL0M" target="_blank">
+                <img src="https://drive.google.com/uc?id=1OzFTf3C_-2n7nLy7f8I0sCD3y3Q_mL0M" alt="Momento especial 4">
+            </a>
+            <a href="https://drive.google.com/uc?id=1fmcMoPd-8izx4beCBxxEsWIFnwZFpZL6" target="_blank">
+                <img src="https://drive.google.com/uc?id=1fmcMoPd-8izx4beCBxxEsWIFnwZFpZL6" alt="Momento especial 5">
+            </a>
+            <a href="https://drive.google.com/uc?id=1evZqn2hOFjh5Uy14gHLSoJQ0ysrpNSQF" target="_blank">
+                <img src="https://drive.google.com/uc?id=1evZqn2hOFjh5Uy14gHLSoJQ0ysrpNSQF" alt="Momento especial 6">
+            </a>
+            <a href="https://drive.google.com/uc?id=13fZTZaTrfU64yyq-sC26GWfk5A0mF-WU" target="_blank">
+                <img src="https://drive.google.com/uc?id=13fZTZaTrfU64yyq-sC26GWfk5A0mF-WU" alt="Momento especial 7">
+            </a>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
